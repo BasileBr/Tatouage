@@ -21,11 +21,15 @@ function main()
              ]
     //filtre = chargerImage("C:\Users\Basile Bruhat\Pictures\traitement_image\logo2.png",3);
     matrice_marquee = production(matrice_initiale, filtre);
+    ecrireImage(matrice_marquee, 'res.png');
     
     // fonction. Permet de calculer une fft et d'afficher le module avec un log
     matrice_marquee_freq = imageToFreq(matrice_marquee);
 
-    afficherImage([matrice_initiale, matrice_initiale_freq; matrice_marquee, matrice_marquee_freq])
+    mat2 = chargerImage('res.png',0);
+    disp(PSNR(matrice_initiale, mat2));
+
+    afficherImage([matrice_initiale, matrice_initiale_freq; matrice_marquee, matrice_marquee_freq]);
     //ecrireImage(img,"C:\Users\Basile Bruhat\Pictures\traitement_image\image_resultante.png")
 endfunction
 

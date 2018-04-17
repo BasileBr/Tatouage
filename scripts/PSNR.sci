@@ -1,4 +1,3 @@
 function res = PSNR(image, image_res)
-    [K,L] = size(image)
-    res = 10*log( ((255^2)*K*L) / ((image .* image_res)^2))
+    res = 10*log10( (255^2)/(mean((image_res-image).^2)) );
 endfunction
