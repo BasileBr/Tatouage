@@ -20,7 +20,7 @@ function main()
                 1,1,1,1,1,1,1
              ]
     //filtre = chargerImage("C:\Users\Basile Bruhat\Pictures\traitement_image\logo2.png",3);
-    [matrice_marquee, module, phase] = production(matrice_initiale, filtre);
+    matrice_marquee = production(matrice_initiale, filtre);
     
     // fonction. Permet de calculer une fft et d'afficher le module avec un log
     matrice_marquee_freq = imageToFreq(matrice_marquee);
