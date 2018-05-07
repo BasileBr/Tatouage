@@ -1,5 +1,5 @@
 funcprot(0);
-CHEMIN = 'C:\Users\Hugo Jové (sécurité)\Desktop\ENSSAT\Semestre 4 Ecole - 2017\Tatouage\';
+CHEMIN = 'C:\Users\CookieV3\Desktop\Tatouage\';
 IMG1 = 'img\test.jpg';
 
 function main()
@@ -31,6 +31,7 @@ function main()
     
     mat3 = chargerImage('res_apres_fb.jpg',0);
     mat3_freq = imageToFreq(mat3);
+    disp(PSNR(matrice_initiale, mat3));
 
     afficherImage([ matrice_initiale, matrice_initiale_freq;
                     matrice_marquee, matrice_marquee_freq;
