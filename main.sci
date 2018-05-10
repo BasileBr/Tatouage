@@ -19,7 +19,7 @@ function main()
                 1,0,1,1,1,0,1;
                 1,1,1,1,1,1,1
              ]
-    //tatouage = chargerImage("C:\Users\Basile Bruhat\Pictures\traitement_image\logo2.png",3);
+
     matrice_marquee = production(matrice_initiale, tatouage);
     ecrireImage(matrice_marquee, 'res.png');
     

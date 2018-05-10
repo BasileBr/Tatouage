@@ -4,6 +4,5 @@ function mod = calculmodule(matrice)
         for j=1:M
             mod(i,j) = log(matrice(i,j) +1)
         end
-        
     end
 endfunction

@@ -8,7 +8,7 @@ function image_marquee = production(image, tatouage)
 
     image_marquee = fftshift(module);
     image_marquee = image_marquee .* img_tatouage;
-//    afficherImage(image_marquee);
+    afficherImage(image_marquee);
 
     image_marquee = fftshift(image_marquee);
 //    afficherImage(image_marquee);
