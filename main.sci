@@ -11,7 +11,7 @@ function main()
     matrice_initiale = chargerImage(IMG1,1);
     matrice_initiale_freq = imageToFreq(matrice_initiale);
    
-    filtre = [  1,1,1,1,1,1,1;
+    tatouage = [  1,1,1,1,1,1,1;
                 1,0,1,1,1,0,1;
                 1,1,1,1,1,1,1;
                 0,1,1,1,1,1,0;
@@ -19,8 +19,8 @@ function main()
                 1,0,1,1,1,0,1;
                 1,1,1,1,1,1,1
              ]
-    //filtre = chargerImage("C:\Users\Basile Bruhat\Pictures\traitement_image\logo2.png",3);
-    matrice_marquee = production(matrice_initiale, filtre);
+    //tatouage = chargerImage("C:\Users\Basile Bruhat\Pictures\traitement_image\logo2.png",3);
+    matrice_marquee = production(matrice_initiale, tatouage);
     ecrireImage(matrice_marquee, 'res.png');
     
     // fonction. Permet de calculer une fft et d'afficher le module avec un log

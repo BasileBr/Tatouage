@@ -1,13 +1,13 @@
-function image_marquee = production(image, filtre)
+function image_marquee = production(image, tatouage)
     [N,M] = size(image);
-    [R,C] = size(filtre);
+    [R,C] = size(tatouage);
     alpha = N/R;
     ImageFreq = fft(image);
     [module,phase] = complexe(ImageFreq);
-    img_filtre = imresize(filtre,alpha,'area');
+    img_tatouage = imresize(tatouage,alpha,'area');
 
     image_marquee = fftshift(module);
-    image_marquee = image_marquee .* img_filtre;
+    image_marquee = image_marquee .* img_tatouage;
 //    afficherImage(image_marquee);
 
     image_marquee = fftshift(image_marquee);
